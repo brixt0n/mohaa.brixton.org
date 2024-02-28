@@ -1,0 +1,13 @@
+site_name: mohaa.brixton.org
+site_url: https://mohaa.brixton.org/
+hide:
+#  - title
+#  - navigation
+#  - toc
+#  - path
+theme: 
+  name: material
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: '#'

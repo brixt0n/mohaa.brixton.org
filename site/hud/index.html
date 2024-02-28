@@ -1,0 +1,789 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mohaa.brixton.org/hud/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../hudhelper/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+    
+    
+      
+        <title>MOHAA Heads Up Display (HUD) - mohaa.brixton.org</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mohaa-heads-up-display-hud" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="mohaa.brixton.org" class="md-header__button md-logo" aria-label="mohaa.brixton.org" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mohaa.brixton.org
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MOHAA Heads Up Display (HUD)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="mohaa.brixton.org" class="md-nav__button md-logo" aria-label="mohaa.brixton.org" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    mohaa.brixton.org
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MOHAA Heads Up Display (HUD)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MOHAA Heads Up Display (HUD)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hotkeys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-scoreboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Scoreboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instant-replay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instant Replay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#following-grenades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Following Grenades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cvars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cvars
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-censorship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Censorship
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hudhelper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HUD Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reloadfix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reload Fix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Competitive Server Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serverbot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server Bot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volute Anticheat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hotkeys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-scoreboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Scoreboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instant-replay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instant Replay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#following-grenades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Following Grenades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cvars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cvars
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-censorship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Censorship
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="mohaa-heads-up-display-hud">MOHAA Heads Up Display (HUD)<a class="headerlink" href="#mohaa-heads-up-display-hud" title="Permanent link">#</a></h1>
+<h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">#</a></h2>
+<p><a href="../img/hud-screenshot-overview.png"><img alt="HUD Screenshot 1" src="../img/hud-screenshot-overview.png" /></a>
+<em>Screenshot of gameplay streamed on Twitch using the HUD.</em></p>
+<p><a href="../img/hud-screenshot-scoreboard-detailed.png"><img alt="HUD Screenshot 2" src="../img/hud-screenshot-scoreboard-detailed.png" /></a>
+<em>Screenshot of the HUD detailed scoreboard.</em></p>
+<p><a href="../img/hud-screenshot-replay.png"><img alt="HUD Screenshot 3" src="../img/hud-screenshot-replay.png" /></a>
+<em>Screenshot of the Instant Replay feature.</em></p>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h2>
+<ol>
+<li>Place the HUD pk3 file in your <code>main</code> folder.</li>
+<li>Launch <code>MOHAA.exe</code>.</li>
+<li>Inject the HUD DLL file (using whichever injector you wish) into the game.</li>
+<li>Join your server.</li>
+</ol>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../static/zzzzz_HUD_Assets_GreyColors.pk3">HUD pk3</a></li>
+<li><a href="../static/brixton-hud.zip">HUD DLL</a></li>
+<li><a href="../static/brixton-injector.zip">Injector</a></li>
+</ul>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">#</a></h2>
+<p><strong>Q</strong>: Which wallhack do you use?<br />
+<strong>A</strong>: The streamer can use any wallhack, but I recommend the "Ghost Chams" 
+wallhack, as it's subtle.</p>
+<p><strong>Q</strong>: Does this auto-update scores during the game?<br />
+<strong>A</strong>: Yes, it runs in the spectator's 
+game, and everything updates automatically without intervention.</p>
+<p><strong>Q</strong>: Can I change the graphics?<br />
+<strong>A</strong>: Yes, you can modify any of the HUD graphics by downloading the HUD pk3 
+and updating the graphics there.  Note that changing their size may not change 
+their size in game as their size is hard-coded.</p>
+<p><strong>Q</strong>: How does it know which player is on which team?<br />
+<strong>A</strong>: You use the custom HUD cvars <code>hud.team1.tag</code> and <code>hud.team2.tag</code> to 
+tell the HUD which player tags to look for for each team.</p>
+<p><strong>Q</strong>: Can I use the HUD with Volute?<br />
+<strong>A</strong>: No; the participating players use Volute as normal, and the streamer 
+does not.</p>
+<h2 id="hotkeys">Hotkeys<a class="headerlink" href="#hotkeys" title="Permanent link">#</a></h2>
+<p>Left ALT key is the master key. Combine this with the following:</p>
+<ul>
+<li><strong>[0-9]</strong>: Rotate the player we are speccing until we reach the target 
+player.</li>
+<li><strong>A</strong>: Hide/show notification messages.</li>
+<li><strong>C</strong>: Hide/show chat messages.</li>
+<li><strong>F</strong>: Toggle model shrinking when speccing player (useful for specfix 
+severs).  Only toggles when you are speccing the player, no other time (e.g., 
+free spec).</li>
+<li><strong>H</strong>: Toggle round "HOLDING".  When HOLDING, and a new round starts, the 
+stats from the previous round do not get saved.</li>
+<li><strong>K</strong>: Hide/show kill feed.</li>
+<li><strong>M</strong>: Toggle map score view (show scores from current map).</li>
+<li><strong>N</strong>: Hide/show player names drawn on players.</li>
+<li><strong>R</strong>: Instant replay for the last 7 seconds, within the game.  Note that in 
+free spectate mode, you can also look freely in the replay.</li>
+<li><strong>S</strong>: Swap logos (i.e., teams changed side).  Note this should <em>not</em> be 
+used if <code>hud.team1.tag</code> and <code>hud.team2.tag</code> are used, as the swap is 
+automatically detected.</li>
+<li><strong>T</strong>: Hide/show team colours.</li>
+<li><strong>INSERT/DELETE</strong> and <strong>PAGEUP/PAGEDOWN</strong>: Increase/decrease team Obj scores 
+manually.  Note that in Obj, the score auto-increases when <code>hud.team1.tag</code> and 
+<code>hud.team2.tag</code> are used, but any errors can be corrected manually with these 
+hotkeys.</li>
+</ul>
+<h2 id="custom-scoreboard">Custom Scoreboard<a class="headerlink" href="#custom-scoreboard" title="Permanent link">#</a></h2>
+<p>You can show the custom scoreboard by holding TAB as normal.  KDR stands for 
+Kill/Death Ratio.  When the custom scoreboard is being displayed, the 
+following keys can be used:</p>
+<ul>
+<li><strong>D</strong>: Toggle detailed view.  </li>
+<li><strong>LEFT/RIGHT</strong>: Show previous/next map details.  Note that whether you are 
+HOLDING also affects this display.</li>
+</ul>
+<p>The following definitions are used in the detailed scoreboard:</p>
+<ul>
+<li><strong>K</strong>: Kills.</li>
+<li><strong>D</strong>: Deaths.</li>
+<li><strong>+/-</strong>: Total kills (Kills - Deaths).</li>
+<li><strong>HS</strong>: Headshots.</li>
+<li><strong>NK</strong>: Kills by Grenads (Nade Kills).</li>
+<li><strong>TK</strong>: Team Kills.</li>
+<li><strong>SU</strong>: Suicides.</li>
+</ul>
+<h2 id="instant-replay">Instant Replay<a class="headerlink" href="#instant-replay" title="Permanent link">#</a></h2>
+<p>When the instant replay is being used, the following hotkeys can be used:</p>
+<ul>
+<li><strong>LEFT/RIGHT</strong>: Go back/forwards (rewind/play).</li>
+<li><strong>UP</strong>: Exit the instant replay mode.</li>
+</ul>
+<h2 id="following-grenades">Following Grenades<a class="headerlink" href="#following-grenades" title="Permanent link">#</a></h2>
+<p>When spectating a player and they throw a grenade, hold the <strong>G</strong> key to 
+follow the grenade.  You can let go of <strong>G</strong> to stop following; press again to 
+resume following.</p>
+<h2 id="cvars">Cvars<a class="headerlink" href="#cvars" title="Permanent link">#</a></h2>
+<ul>
+<li><code>hud.team1.name</code>: Set team 1 name (default "Team 1").</li>
+<li><code>hud.team2.name</code>: Set team 2 name (default "Team 2").</li>
+<li><code>hud.team1.tag</code>: Set team 1 clan tag (works if they are either Allies or 
+Axis).  This assigns players with a matching tag to this team.  This is 
+<strong>required for automatic scoring to work</strong>.</li>
+<li><code>hud.team2.tag</code>: Set team 2 clan tag (works if they are either Allies or 
+Axis).  This assigns players with a matching tag to this team.  This is 
+<strong>required for automatic scoring to work</strong>.</li>
+<li><code>hud.title</code>: Set the title at the top (above scores/round information).</li>
+<li><code>hud.fov</code>: Set the horizontal Field of Vision.  Affects the world when not 
+zoomed so you can increase what is visible on the screen.  Common values are 
+<code>97</code> for 16:9, <code>90</code> for 16:10 and the default is <code>80</code> for 4:3.</li>
+</ul>
+<h2 id="automatic-censorship">Automatic Censorship<a class="headerlink" href="#automatic-censorship" title="Permanent link">#</a></h2>
+<ul>
+<li>HUD filters AlphaMAC chat messages completely in order to censor server IPs 
+from stream (no longer relevant, as AlphaMAC is gone).</li>
+<li>HUD filters <code>rcon status</code> responses to censor client IPs from stream.</li>
+</ul>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
+<ul>
+<li>You must use an approved version of MOHAA to stream, else some/all features 
+won't work.</li>
+<li>If the HUD crashes, the whole game crashes.</li>
+<li>Use of custom weapons (e.g., silenced pistol) may crash the game.</li>
+<li>Wallhack was removed - please use your favourite pk3-based wallhack for 
+spectating.</li>
+<li>Cheat protection is removed from the game automatically so cheat-protected 
+cvars can be used, if you wish.</li>
+<li>The HUD is intended for use in Objective mode servers, but will work in TDM 
+servers.  If gametype is not Objective, it will count and show each team's 
+kills and deaths, rather than "rounds".</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
