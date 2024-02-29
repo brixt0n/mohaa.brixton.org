@@ -6,32 +6,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mohaa.brixton.org/hud/</loc>
+         <loc>https://mohaa.brixton.org/Info/clientconfig/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mohaa.brixton.org/hudhelper/</loc>
+         <loc>https://mohaa.brixton.org/Info/server/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mohaa.brixton.org/reloadfix/</loc>
+         <loc>https://mohaa.brixton.org/Tools/hud/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mohaa.brixton.org/server/</loc>
+         <loc>https://mohaa.brixton.org/Tools/hudhelper/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mohaa.brixton.org/serverbot/</loc>
+         <loc>https://mohaa.brixton.org/Tools/reloadfix/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mohaa.brixton.org/volute/</loc>
+         <loc>https://mohaa.brixton.org/Tools/serverbot/</loc>
+         <lastmod>2024-02-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mohaa.brixton.org/Tools/volute/</loc>
          <lastmod>2024-02-29</lastmod>
          <changefreq>daily</changefreq>
     </url>

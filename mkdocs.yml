@@ -8,6 +8,12 @@ hide:
 theme: 
   name: material
   favicon: 'img/favicon.ico'
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.sections
 markdown_extensions:
   - attr_list
   - toc:

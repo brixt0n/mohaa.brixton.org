@@ -31,5 +31,6 @@ using a VPN.  This helps server administrators stay on top of cheaters and
 trolls.
 
 More documentation coming soon.
+
 <!---
 --->

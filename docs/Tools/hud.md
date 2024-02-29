@@ -1,25 +1,38 @@
-# MOHAA Heads Up Display (HUD)
+# Heads Up Display (HUD)
+This is a client-side application designed for streamers who want to stream 
+Medal of Honor: Allied Assault matches on Twitch.  It provides a clear 
+overview of the current match, including team names and logos, current score, 
+player status (alive/dead, health), player statistics (kills, kill-streak, 
+health, current weapon), a kill-feed, customized in-game chat, a large custom 
+scoreboard, and more.
+
+The HUD automatically assigns players to teams based on settings and their 
+clan tags.  When assigned to teams, the statistics for each player and the 
+team as a whole are counted automatically.  There are also numerous hotkeys 
+and features to aid the streamer to create an engaging stream, such as holding 
+rounds, adjusting scores manually, instant replay, and more.
 
 ## Screenshots
-[![HUD Screenshot 1](img/hud-screenshot-overview.png)](img/hud-screenshot-overview.png)
+[![HUD Screenshot 1](/img/hud-screenshot-overview.png)](img/hud-screenshot-overview.png)
 *Screenshot of gameplay streamed on Twitch using the HUD.*
 
-[![HUD Screenshot 2](img/hud-screenshot-scoreboard-detailed.png)](img/hud-screenshot-scoreboard-detailed.png)
+[![HUD Screenshot 2](/img/hud-screenshot-scoreboard-detailed.png)](img/hud-screenshot-scoreboard-detailed.png)
 *Screenshot of the HUD detailed scoreboard.*
 
-[![HUD Screenshot 3](img/hud-screenshot-replay.png)](img/hud-screenshot-replay.png)
+[![HUD Screenshot 3](/img/hud-screenshot-replay.png)](img/hud-screenshot-replay.png)
 *Screenshot of the Instant Replay feature.*
 
-## Quick Start
-1. Place the HUD pk3 file in your `main` folder.
-1. Launch `MOHAA.exe`.
-1. Inject the HUD DLL file (using whichever injector you wish) into the game.
-1. Join your server.
+## Download
+- [HUD pk3](/static/zzzzz_HUD_Assets_GreyColors.pk3)
+- [HUD DLL](/static/brixton-hud.zip)
+- [Injector](/static/brixton-injector.zip)
 
-## Files
-- [HUD pk3](static/zzzzz_HUD_Assets_GreyColors.pk3)
-- [HUD DLL](static/brixton-hud.zip)
-- [Injector](static/brixton-injector.zip)
+## Quick Start
+1. Download the HUD pk3, HUD DLL and Injector.
+1. Place the HUD pk3 in your `main` folder.
+1. Launch `MOHAA.exe`.
+1. Inject the HUD DLL file (using the provided injector) into the game.
+1. Join your server.
 
 ## FAQ
 **Q**: Which wallhack do you use?<br />
@@ -130,3 +143,6 @@ cvars can be used, if you wish.
 - The HUD is intended for use in Objective mode servers, but will work in TDM 
 servers.  If gametype is not Objective, it will count and show each team's 
 kills and deaths, rather than "rounds".
+
+<!---
+--->
