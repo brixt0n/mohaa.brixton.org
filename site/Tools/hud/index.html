@@ -435,6 +435,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#radar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Radar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsupported-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsupported Maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotting-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotting Logic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-scoreboard" class="md-nav__link">
     <span class="md-ellipsis">
       Custom Scoreboard
@@ -660,6 +702,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#radar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Radar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsupported-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsupported Maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotting-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotting Logic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-scoreboard" class="md-nav__link">
     <span class="md-ellipsis">
       Custom Scoreboard
@@ -803,6 +887,34 @@ automatically detected.</li>
 manually.  Note that in Obj, the score auto-increases when <code>hud.team1.tag</code> and 
 <code>hud.team2.tag</code> are used, but any errors can be corrected manually with these 
 hotkeys.</li>
+</ul>
+<h2 id="radar">Radar<a class="headerlink" href="#radar" title="Permanent link">#</a></h2>
+<p>Player positions are plotted based on their <code>xyz</code> co-ordinates on the map, and 
+scaled down to the radar size and offset by the radar position.  The result 
+was tuned with trial-and-error adjustments to get player positions just right.</p>
+<p>Strangely, the radar image itself is taken from the port of MOHAA maps to 
+CS:GO!</p>
+<h3 id="supported-maps">Supported Maps<a class="headerlink" href="#supported-maps" title="Permanent link">#</a></h3>
+<p>Currently, the following maps have a radar:</p>
+<ul>
+<li><code>obj/obj_team1</code> (Hunt)</li>
+<li><code>obj/obj_team2</code> (V2)</li>
+<li><code>obj/obj_team4</code> (Bridge)</li>
+<li><code>obj/vsuk-abbeybeta</code> (VSUK Abbey)</li>
+</ul>
+<h3 id="unsupported-maps">Unsupported Maps<a class="headerlink" href="#unsupported-maps" title="Permanent link">#</a></h3>
+<p>Unsupported maps appear with a large question-mark instead of a radar, and 
+player positions are not plotted.</p>
+<h3 id="plotting-logic">Plotting Logic<a class="headerlink" href="#plotting-logic" title="Permanent link">#</a></h3>
+<p>Players are plotted as follows:</p>
+<ul>
+<li>Team colours (red/blue) are used to signify Axis/Allies.</li>
+<li>A green square is placed around the player you are currently spectating (if 
+any).</li>
+<li>Players who are deemed to be significantly below the "ground" level based on 
+their co-ordinates appear as a ↓ "down arrow"</li>
+<li>Players who are deemed to be significantly above the "ground" level based on 
+their co-ordinates appear as a ↑ "up arrow".</li>
 </ul>
 <h2 id="custom-scoreboard">Custom Scoreboard<a class="headerlink" href="#custom-scoreboard" title="Permanent link">#</a></h2>
 <p>You can show the custom scoreboard by holding TAB as normal.  KDR stands for 

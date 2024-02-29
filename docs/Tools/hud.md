@@ -82,6 +82,37 @@ manually.  Note that in Obj, the score auto-increases when `hud.team1.tag` and
 `hud.team2.tag` are used, but any errors can be corrected manually with these 
 hotkeys.
 
+## Radar
+Player positions are plotted based on their `xyz` co-ordinates on the map, and 
+scaled down to the radar size and offset by the radar position.  The result 
+was tuned with trial-and-error adjustments to get player positions just right.
+
+Strangely, the radar image itself is taken from the port of MOHAA maps to 
+CS:GO!
+
+### Supported Maps
+Currently, the following maps have a radar:
+
+- `obj/obj_team1` (Hunt)
+- `obj/obj_team2` (V2)
+- `obj/obj_team4` (Bridge)
+- `obj/vsuk-abbeybeta` (VSUK Abbey)
+
+### Unsupported Maps
+Unsupported maps appear with a large question-mark instead of a radar, and 
+player positions are not plotted.
+
+### Plotting Logic
+Players are plotted as follows:
+
+- Team colours (red/blue) are used to signify Axis/Allies.
+- A green square is placed around the player you are currently spectating (if 
+any).
+- Players who are deemed to be significantly below the "ground" level based on 
+their co-ordinates appear as a ↓ "down arrow"
+- Players who are deemed to be significantly above the "ground" level based on 
+their co-ordinates appear as a ↑ "up arrow".
+
 ## Custom Scoreboard
 You can show the custom scoreboard by holding TAB as normal.  KDR stands for 
 Kill/Death Ratio.  When the custom scoreboard is being displayed, the 
