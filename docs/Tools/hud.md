@@ -13,13 +13,13 @@ and features to aid the streamer to create an engaging stream, such as holding
 rounds, adjusting scores manually, instant replay, and more.
 
 ## Screenshots
-[![HUD Screenshot 1](/img/hud-screenshot-overview.png)](img/hud-screenshot-overview.png)
+[![HUD Screenshot 1](/img/hud-screenshot-overview.png)](/img/hud-screenshot-overview.png)
 *Screenshot of gameplay streamed on Twitch using the HUD.*
 
-[![HUD Screenshot 2](/img/hud-screenshot-scoreboard-detailed.png)](img/hud-screenshot-scoreboard-detailed.png)
+[![HUD Screenshot 2](/img/hud-screenshot-scoreboard-detailed.png)](/img/hud-screenshot-scoreboard-detailed.png)
 *Screenshot of the HUD detailed scoreboard.*
 
-[![HUD Screenshot 3](/img/hud-screenshot-replay.png)](img/hud-screenshot-replay.png)
+[![HUD Screenshot 3](/img/hud-screenshot-replay.png)](/img/hud-screenshot-replay.png)
 *Screenshot of the Instant Replay feature.*
 
 ## Download
