@@ -7,6 +7,7 @@ hide:
 #  - path
 theme: 
   name: material
+  favicon: 'img/favicon.ico'
 markdown_extensions:
   - attr_list
   - toc:

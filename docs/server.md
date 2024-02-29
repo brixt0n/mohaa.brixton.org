@@ -1,5 +1,4 @@
 # Competitive Server Setup
-
 More documentation coming soon.
 <!---
 basic setup and installation (linux only)

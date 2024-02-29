@@ -84,7 +84,7 @@ The following definitions are used in the detailed scoreboard:
 - **D**: Deaths.
 - **+/-**: Total kills (Kills - Deaths).
 - **HS**: Headshots.
-- **NK**: Kills by Grenads (Nade Kills).
+- **NK**: Kills by Grenades (Nade Kills).
 - **TK**: Team Kills.
 - **SU**: Suicides.
 
